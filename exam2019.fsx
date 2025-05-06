@@ -196,7 +196,7 @@ let price (s, d) =
     | "ISS", (1, 3, 2018) -> 200.2
     | "TIVOLI", (1, 2, 2018) -> 212.0
     | "TIVOLI", (1, 3, 2018) -> 215.2
-    | _, _ -> raise (Error "not in lookup table") //ensure consistent output
+    | _, _ -> raise (Error "not in lookup table") //ensure consistent output (safe exception)
 
 printfn "%A" (price ("APPLE", (1, 2, 2018)))
 
