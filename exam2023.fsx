@@ -358,7 +358,7 @@ let rec evalFuncDef (env: Map<source, float>) fDef =
         let intermediateResult = evalOpr sor1' sor2' opr
         addEnv tar intermediateResult env
     | CONST(t, f) -> addEnv t f env
-    | SEQ xs -> List.fold evalFuncDef env xs // practical example of how to use fold instead of tail recurion
+    | SEQ xs -> List.fold evalFuncDef env xs // practical example of how to use fold instead of recursion
 // let rec loop lst =
 //     match lst with
 //     | x :: xs' ->
